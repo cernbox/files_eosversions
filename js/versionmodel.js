@@ -54,7 +54,8 @@
 			var url = OC.generateUrl('/apps/files_eosversions/download.php');
 			var params = {
 				file: this.get('fullPath'),
-				revision: this.get('version')
+				revision: this.get('version'),
+				'x-access-token': OC['X-Access-Token']
 			};
 			return url + '?' + OC.buildQueryString(params);
 		}
